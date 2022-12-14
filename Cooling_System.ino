@@ -238,20 +238,20 @@ void running_state(){
 
 void print_val(){
   DateTime now = rtc.now();
-  Serial.print("Date & Time: ");
-  Serial.print(now.year(), DEC);
-  Serial.print('/');
-  Serial.print(now.month(), DEC);
-  Serial.print('/');
-  Serial.print(now.day(), DEC);
-  Serial.print(" (");
-  Serial.print(daysOfTheWeek[now.dayOfTheWeek()]);
-  Serial.print(") ");
-  Serial.print(now.hour(), DEC);
-  Serial.print(':');
-  Serial.print(now.minute(), DEC);
-  Serial.print(':');
-  Serial.println(now.second(), DEC);
+  U0putchar("Date & Time: ");
+  U0putchar(now.year(), DEC);
+  U0putchar('/');
+  U0putchar(now.month(), DEC);
+  U0putchar('/');
+  U0putchar(now.day(), DEC);
+  U0putchar(" (");
+  U0putchar(daysOfTheWeek[now.dayOfTheWeek()]);
+  U0putchar(") ");
+  U0putchar(now.hour(), DEC);
+  U0putchar(':');
+  U0putchar(now.minute(), DEC);
+  U0putchar(':');
+  U0putchar(now.second(), DEC);
 
   delay(1000); // delay 1 seconds
 }
